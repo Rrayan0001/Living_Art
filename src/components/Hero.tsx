@@ -21,7 +21,7 @@ export default function Hero() {
     <section className="hero-section" id="hero" ref={heroRef}>
       {/* Background image — uses the first actual project photo */}
       <img
-        src="/assets/projects/project-007.jpg"
+        src="/assets/projects/tharun-residence-hosur/photo-01.jpg"
         alt="LA Architects — signature project in golden-hour light"
         className="hero-image"
         fetchPriority="high"
