@@ -1089,3 +1089,33 @@ a {
   color: var(--bronze);
 }
 
+/* Dark Outline Button */
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-medium);
+  color: var(--charcoal);
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  min-height: 48px;
+  transition: all 0.2s ease;
+  background: transparent;
+  cursor: pointer;
+}
+.btn-outline-dark:hover {
+  border-color: var(--bronze);
+  color: var(--bronze);
+  transform: translateY(-2px);
+}
+@media (min-width: 640px) {
+  .btn-outline-dark {
+    font-size: 14px;
+    padding: 16px 32px;
+  }
+}
+

@@ -50,9 +50,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="desktop-nav" aria-label="Desktop Navigation">
-            <a href="#hero" className="nav-link">About</a>
-            <a href="#gallery" className="nav-link">Projects</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="/#hero" className="nav-link">About</a>
+            <a href="/projects" className="nav-link">Projects</a>
+            <a href="/#contact" className="nav-link">Contact</a>
           </nav>
 
           {/* Right Call CTA */}
@@ -90,9 +90,9 @@ export default function Header() {
         aria-label="Mobile Navigation Menu"
       >
         <nav className="mobile-nav">
-          <a href="#hero" className="mobile-nav-link" onClick={closeMenu}>About</a>
-          <a href="#gallery" className="mobile-nav-link" onClick={closeMenu}>Projects</a>
-          <a href="#contact" className="mobile-nav-link" onClick={closeMenu}>Contact</a>
+          <a href="/#hero" className="mobile-nav-link" onClick={closeMenu}>About</a>
+          <a href="/projects" className="mobile-nav-link" onClick={closeMenu}>Projects</a>
+          <a href="/#contact" className="mobile-nav-link" onClick={closeMenu}>Contact</a>
         </nav>
       </div>
     </>

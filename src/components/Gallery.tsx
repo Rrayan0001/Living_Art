@@ -79,9 +79,134 @@ const projectsData: Project[] = [
       return `/assets/projects/abhilash-soora-honda-showroom-tumkur/photo-${idx}.jpg`;
     }),
   },
+  {
+    folder: "babu-vr-residence-hosur",
+    title: "Babu V.R. Residence",
+    type: "Modern Facade Design",
+    location: "Hosur, Tamil Nadu",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/babu-vr-residence-hosur/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "damodharan-residence-vellore",
+    title: "Damodharan Residence",
+    type: "Contemporary Residence Elevation",
+    location: "Vellore, Tamil Nadu",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/damodharan-residence-vellore/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "jagadish-residence-sira-tumkur",
+    title: "Jagadish Residence",
+    type: "Classic Residential Front",
+    location: "Tumkur, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 1 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/jagadish-residence-sira-tumkur/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "kumar-residence-bangalore",
+    title: "Kumar Residence",
+    type: "Premium Facade Architecture",
+    location: "Bangalore, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/kumar-residence-bangalore/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "la-marvella-luxury-hotel-bangalore",
+    title: "La Marvella Luxury Hotel",
+    type: "Luxury Hotel Architecture",
+    location: "Bangalore, Karnataka",
+    category: "Commercial Architecture",
+    images: Array.from({ length: 1 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/la-marvella-luxury-hotel-bangalore/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "mahadeva-gowda-residence-doddaballapur",
+    title: "Mahadeva Gowda Residence",
+    type: "Elegant Elevation Design",
+    location: "Doddaballapur, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 1 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/mahadeva-gowda-residence-doddaballapur/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "nn-vittal-residence-basaveshwara-nagar-bangalore",
+    title: "N.N. Vittal Residence",
+    type: "Premium Residential Elevation",
+    location: "Bangalore, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/nn-vittal-residence-basaveshwara-nagar-bangalore/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "p-kishore-residence-theni",
+    title: "P. Kishore Residence",
+    type: "Grand Facade Design",
+    location: "Theni, Tamil Nadu",
+    category: "Residential Architecture",
+    images: Array.from({ length: 4 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/p-kishore-residence-theni/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "pavan-kumar-residence-yadgiri",
+    title: "Pavan Kumar Residence",
+    type: "Contemporary Facade Elevation",
+    location: "Yadgiri, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/pavan-kumar-residence-yadgiri/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "puttaraju-convention-hall-bangalore",
+    title: "Puttaraju Convention Hall",
+    type: "Commercial Assembly Architecture",
+    location: "Bangalore, Karnataka",
+    category: "Commercial Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/puttaraju-convention-hall-bangalore/photo-${idx}.jpg`;
+    }),
+  },
+  {
+    folder: "raju-residence-attibele-bangalore",
+    title: "Raju Residence",
+    type: "Modern Facade Elevation",
+    location: "Bangalore, Karnataka",
+    category: "Residential Architecture",
+    images: Array.from({ length: 2 }, (_, i) => {
+      const idx = String(i + 1).padStart(2, "0");
+      return `/assets/projects/raju-residence-attibele-bangalore/photo-${idx}.jpg`;
+    }),
+  },
 ];
 
-export default function Gallery() {
+interface GalleryProps {
+  showAll?: boolean;
+}
+
+export default function Gallery({ showAll = false }: GalleryProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeProjectIdx, setActiveProjectIdx] = useState<number | null>(null);
   const [lbOpen, setLbOpen] = useState(false);
@@ -138,18 +263,25 @@ export default function Gallery() {
     }));
   };
 
+  // Render 6 on homepage, or all 17 on the dedicated route
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 6);
+
   return (
     <section className="gallery-section texture-linen" id="gallery" ref={sectionRef}>
       <div className="container">
         {/* Header */}
         <div className="gallery-section-header reveal">
-          <span className="section-eyebrow">Selected Works</span>
-          <h2 className="section-title">Featured Projects</h2>
+          <span className="section-eyebrow">
+            {showAll ? "Our Complete Portfolio" : "Selected Works"}
+          </span>
+          <h2 className="section-title">
+            {showAll ? "All Projects" : "Featured Projects"}
+          </h2>
         </div>
 
         {/* Project Cards Grid */}
         <div className="projects-grid reveal-stagger">
-          {projectsData.map((project, projIdx) => {
+          {displayedProjects.map((project, projIdx) => {
             const primaryImage = project.images[0];
             const secondaryImages = project.images.slice(1);
             
@@ -228,6 +360,19 @@ export default function Gallery() {
             );
           })}
         </div>
+
+        {/* View All Projects Button on Homepage */}
+        {!showAll && (
+          <div className="reveal" style={{ display: "flex", justifyContent: "center", marginTop: "56px" }}>
+            <a href="/projects" className="btn-outline-dark">
+              View All Projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{ marginLeft: "4px" }}>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Lightbox Overlay */}
