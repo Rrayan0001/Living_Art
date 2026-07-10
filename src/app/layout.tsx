@@ -30,7 +30,9 @@ export const metadata: Metadata = {
   description: "28 years of considered architecture in Bangalore. 550+ projects delivering quality of life through design.",
   authors: [{ name: "LA Architects" }],
   icons: {
-    icon: "/assets/branding/LOGO.png",
+    icon: "/assets/branding/favicon.png",
+    shortcut: "/assets/branding/favicon.png",
+    apple: "/assets/branding/favicon.png",
   },
 };
 

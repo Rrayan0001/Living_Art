@@ -35,10 +35,15 @@ export default function Header() {
       <header className={`site-header ${isScrolled ? "scrolled" : ""}`} id="site-header">
         <div className="header-container">
           <a href="#" className="logo-link" aria-label="LA Architects Home" onClick={closeMenu}>
-            {/* Using standard img here because of styling filters, or Next Image */}
             <img
-              src="/assets/branding/LOGO.png"
-              alt="LA Architects Logo"
+              src="/assets/branding/logo1.png"
+              alt="Living Aart Logo"
+              className="brand-logo"
+            />
+            <div className="logo-separator" />
+            <img
+              src="/assets/branding/logo2.png"
+              alt="Living Incorp Logo"
               className="brand-logo"
             />
           </a>
