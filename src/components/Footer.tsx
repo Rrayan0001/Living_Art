@@ -20,9 +20,11 @@ export default function Footer() {
           <div className="footer-inner">
             {/* Brand */}
             <div className="footer-brand-row">
-              <div className="footer-logo-box">
-                <span className="footer-logo-text">LA</span>
-              </div>
+              <img 
+                src="/assets/branding/favicon.png" 
+                alt="LA Architects Logo Mark" 
+                className="footer-logo-img" 
+              />
               <div>
                 <span className="footer-brand-name">LA Architects</span>
                 <p className="footer-tagline">28 Years. Every Wall Considered.</p>
