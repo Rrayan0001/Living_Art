@@ -1,4 +1,5 @@
 import React from "react";
+import WelcomeScreen from "@/components/WelcomeScreen";
 import Header from "@/components/Header";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
@@ -6,6 +7,9 @@ import Footer from "@/components/Footer";
 export default function ProjectsPage() {
   return (
     <>
+      {/* Welcome Screen Preloader */}
+      <WelcomeScreen />
+
       {/* Sticky Navigation Header */}
       <Header />
 
