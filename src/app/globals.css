@@ -19,6 +19,29 @@
   --bronze-dark:     #8a6b42;
   --arch-blue:       #1a2b4a;
 
+  /* Theme Alias Variables */
+  --bg-primary: var(--alabaster);
+  --bg-secondary: var(--alabaster-warm);
+  --bg-tertiary: var(--alabaster-deep);
+  --bg-card: #ffffff;
+  
+  --text-primary: var(--charcoal);
+  --text-secondary: var(--slate);
+  --text-muted: #86868b;
+  
+  --border-light: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-gold: rgba(163, 128, 82, 0.25);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 0 20px rgba(163, 128, 82, 0.05);
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+
   /* Transitions */
   --ease-fast:   0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   --ease-normal: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
