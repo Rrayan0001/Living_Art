@@ -84,6 +84,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1396,6 +1397,8 @@ a {
   margin-bottom: 40px;
   animation: fadeInUp 0.8s ease 0.2s forwards;
   opacity: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .welcome-tagline-eyebrow {
@@ -1421,6 +1424,7 @@ a {
   font-size: 13px;
   color: var(--text-secondary);
   font-weight: 400;
+  text-align: center;
 }
 
 .welcome-spinner-wrap {
