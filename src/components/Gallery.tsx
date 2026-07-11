@@ -5,17 +5,26 @@ import { motion } from "motion/react";
 import Lightbox, { LightboxProject } from "./Lightbox";
 
 // Define the asset URLs
-const elevationImages = Array.from({ length: 31 }, (_, i) => {
+const heroImages = [
+  "/assets/Hero_section/WhatsApp Image 2026-07-11 at 11.23.49 AM.jpeg",
+  "/assets/Hero_section/WhatsApp Image 2026-07-11 at 11.24.40 AM.jpeg",
+  "/assets/Hero_section/WhatsApp Image 2026-07-11 at 11.25.04 AM.jpeg",
+  "/assets/Hero_section/WhatsApp Image 2026-07-11 at 11.25.20 AM.jpeg",
+];
+
+const baseElevationImages = Array.from({ length: 31 }, (_, i) => {
   const idx = String(i + 1).padStart(3, "0");
   return `/assets/living-aart-elevation-architecture/elevation-${idx}.jpg`;
 }).filter(src => !src.includes("elevation-004.jpg"));
+
+const elevationImages = [...heroImages, ...baseElevationImages];
 
 const interiorImages = Array.from({ length: 36 }, (_, i) => {
   const idx = String(i + 1).padStart(3, "0");
   return `/assets/living-incorp-interiors/interior-${idx}.jpg`;
 });
 
-// Home Page: 7 selected premium images for each category
+// Home Page: 7 selected premium images for each category (hero images are now at the start of elevationImages)
 const featuredElevation = elevationImages.slice(0, 7);
 const featuredInteriors = interiorImages.slice(0, 7);
 
@@ -64,7 +73,7 @@ export function CardStack({
               width: "100%",
               height: "100%",
               overflow: "hidden",
-              borderRadius: 16,
+              borderRadius: 6,
               border: "1px solid rgba(163, 128, 82, 0.18)",
               boxShadow: `0 ${12 + i * 4}px ${36 + i * 8}px rgba(0,0,0,${0.12 + i * 0.04})`,
               cursor: i === 0 ? "grab" : "default",
@@ -217,17 +226,17 @@ export default function Gallery({ showAll = false }: GalleryProps) {
 
   // 1. Homepage View (showAll = false): Renders two distinct sections with inline sliders
   if (!showAll) {
-    const elevationSlides = formatSlides(featuredElevation, "Living Aart Elevation", "Living Aart — Elevation & Architecture");
-    const interiorSlides = formatSlides(featuredInteriors, "Living Incorp Interior", "Living Incorp — Premium Interiors");
+    const elevationSlides = formatSlides(featuredElevation, "Living Aart Architecture", "Living Aart — Architecture");
+    const interiorSlides = formatSlides(featuredInteriors, "Living Art Interior", "Living Art — Premium Interiors");
 
     return (
       <section className="gallery-section texture-linen" id="gallery" ref={sectionRef}>
         
-        {/* Section 1: Living Aart — Elevation & Architecture */}
+        {/* Section 1: Living Aart — Architecture */}
         <div className="container" style={{ marginBottom: "112px" }}>
           <div className="gallery-section-header reveal text-center" style={{ marginBottom: "48px" }}>
             <span className="section-eyebrow">Living Aart</span>
-            <h2 className="section-title">Elevation &amp; Architecture</h2>
+            <h2 className="section-title">Architecture</h2>
             <div className="about-heading-line" style={{ margin: "16px auto 0 auto" }} />
           </div>
 
@@ -251,7 +260,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
 
           <div className="reveal justify-center" style={{ marginTop: "48px" }}>
             <a href="/projects?tab=elevation" className="btn-outline-dark">
-              View All Elevation Works
+              View All Architecture Works
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{ marginLeft: "6px" }}>
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -260,10 +269,10 @@ export default function Gallery({ showAll = false }: GalleryProps) {
           </div>
         </div>
 
-        {/* Section 2: Living Incorp — Premium Interiors */}
+        {/* Section 2: Living Art — Premium Interiors */}
         <div className="container">
           <div className="gallery-section-header reveal text-center" style={{ marginBottom: "48px" }}>
-            <span className="section-eyebrow">Living Incorp</span>
+            <span className="section-eyebrow">Living Art</span>
             <h2 className="section-title">Premium Interiors</h2>
             <div className="about-heading-line" style={{ margin: "16px auto 0 auto" }} />
           </div>
@@ -315,8 +324,8 @@ export default function Gallery({ showAll = false }: GalleryProps) {
 
   // 2. Projects Page View (showAll = true): Renders tabbed switcher for all works
   const activeImages = activeTab === "elevation" ? elevationImages : interiorImages;
-  const tabTitlePrefix = activeTab === "elevation" ? "Living Aart Elevation" : "Living Incorp Interior";
-  const tabTypeLabel = activeTab === "elevation" ? "Living Aart — Elevation & Architecture" : "Living Incorp — Premium Interiors";
+  const tabTitlePrefix = activeTab === "elevation" ? "Living Aart Architecture" : "Living Art Interior";
+  const tabTypeLabel = activeTab === "elevation" ? "Living Aart — Architecture" : "Living Art — Premium Interiors";
   
   const displayedImages = activeImages.slice(0, visibleCount);
   const allSlides = formatSlides(activeImages, tabTitlePrefix, tabTypeLabel);
@@ -338,7 +347,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
             className={`gallery-tab-btn ${activeTab === "elevation" ? "active" : ""}`}
             onClick={() => setActiveTab("elevation")}
           >
-            Elevation &amp; Architecture
+            Architecture
             <span className="tab-brand-indicator">Living Aart</span>
           </button>
           <button
@@ -346,7 +355,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
             onClick={() => setActiveTab("interiors")}
           >
             Premium Interiors
-            <span className="tab-brand-indicator">Living Incorp</span>
+            <span className="tab-brand-indicator">Living Art</span>
           </button>
         </div>
 
@@ -368,7 +377,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
                 }
               }}
             >
-              <div className="project-main-image-wrap" style={{ aspectRatio: "3/2", borderRadius: "12px", overflow: "hidden" }}>
+              <div className="project-main-image-wrap" style={{ aspectRatio: "3/2", borderRadius: "6px", overflow: "hidden" }}>
                 <img
                   src={src}
                   alt={`${tabTypeLabel} Project ${idx + 1}`}

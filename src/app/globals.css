@@ -64,8 +64,8 @@
   --shadow-gold: 0 0 20px rgba(163, 128, 82, 0.05);
 
   --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 16px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
 
   /* Transitions */
   --ease-fast:   0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -900,7 +900,7 @@ a {
 .lb-panel {
   position: relative;
   background: #1a1a1c;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
   max-width: 900px;
   width: 100%;
@@ -942,7 +942,7 @@ a {
   flex-shrink: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 16px 16px 0 0;
+  border-radius: 8px 8px 0 0;
   background: #111;
 }
 @media (max-width: 640px) {
