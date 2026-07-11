@@ -45,13 +45,18 @@ export default function WelcomeScreen() {
       aria-label="Loading LA Architects"
     >
       <div className="welcome-content">
-        {/* Monochrome Logo */}
+        {/* Separated logo images stacked vertically */}
         <div className="welcome-logos">
           <img
-            src="/assets/branding/LOGO monochrome_.png"
-            alt="Living Art Logo"
+            src="/assets/branding/logo1.png"
+            alt="Living Aart Logo"
             className="welcome-logo-img"
-            style={{ height: "64px", width: "auto", objectFit: "contain" }}
+          />
+          <div className="welcome-logo-separator" />
+          <img
+            src="/assets/branding/logo2.png"
+            alt="Living Incorp Logo"
+            className="welcome-logo-img"
           />
         </div>
 

@@ -89,7 +89,6 @@ html {
 body {
   --font-body: 'Glacial Indifference', sans-serif !important;
   --font-serif: 'Glacial Indifference', sans-serif !important;
-  --font-condensed: 'Glacial Indifference', sans-serif !important;
 
   font-family: var(--font-body);
   font-size: 16px;

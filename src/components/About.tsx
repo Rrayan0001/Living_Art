@@ -133,13 +133,22 @@ export default function About() {
             {/* Premium Black Brand Synergy Card */}
             <div className="synergy-card">
               <div className="synergy-card-inner justify-center">
-                <div className="synergy-logos-row" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                  <div className="synergy-logo-wrapper" style={{ width: "100%", maxWidth: "320px", display: "flex", justifyContent: "center" }}>
+                <div className="synergy-logos-row">
+                  <div className="synergy-logo-wrapper">
                     <img
-                      src="/assets/branding/LOGO monochrome_.png"
-                      alt="Living Art Logo"
-                      className="synergy-logo-img filter-invert"
-                      style={{ maxHeight: "64px", width: "auto", objectFit: "contain" }}
+                      src="/assets/branding/monochrome_logo1.png"
+                      alt="Living Aart - Architects &amp; Interior Designers"
+                      className="synergy-logo-img"
+                      style={{ maxHeight: "40px", objectFit: "contain", width: "auto" }}
+                    />
+                  </div>
+                  <div className="synergy-divider-line" />
+                  <div className="synergy-logo-wrapper">
+                    <img
+                      src="/assets/branding/monochrome_logo2.png"
+                      alt="Living Art - The Construction Team"
+                      className="synergy-logo-img"
+                      style={{ maxHeight: "40px", objectFit: "contain", width: "auto" }}
                     />
                   </div>
                 </div>
