@@ -1364,10 +1364,13 @@ a {
 .welcome-logos {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   margin-bottom: 32px;
   animation: fadeInDown 0.8s ease forwards;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .welcome-logo-img {
@@ -1385,6 +1388,7 @@ a {
   width: 32px;
   height: 1px;
   background: rgba(163, 128, 82, 0.25);
+  margin-left: 14px;
 }
 
 .welcome-text-group {
