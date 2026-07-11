@@ -52,13 +52,13 @@ export default function Hero() {
 
       {/* Main content — bottom left */}
       <div className="hero-content justify-end items-start">
-        <h1 className="hero-title reveal">
+        <h1 className="hero-title reveal reveal-left">
           28 Years.<br />Every Wall Considered.
         </h1>
-        <p className="hero-sub reveal">
+        <p className="hero-sub reveal reveal-left">
           Architecture, Interiors &amp; Turnkey Construction in Bangalore.
         </p>
-        <div className="hero-ctas reveal justify-center">
+        <div className="hero-ctas reveal reveal-bottom justify-center">
           <a href="#gallery" className="btn-primary">
             View Our Work
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

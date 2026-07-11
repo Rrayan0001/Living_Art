@@ -234,14 +234,14 @@ export default function Gallery({ showAll = false }: GalleryProps) {
         
         {/* Section 1: Living Aart — Architecture */}
         <div className="container" style={{ marginBottom: "112px" }}>
-          <div className="gallery-section-header reveal text-center" style={{ marginBottom: "48px" }}>
+          <div className="gallery-section-header reveal reveal-top text-center" style={{ marginBottom: "48px" }}>
             <span className="section-eyebrow">Living Aart</span>
             <h2 className="section-title">Architecture</h2>
             <div className="about-heading-line" style={{ margin: "16px auto 0 auto" }} />
           </div>
 
           {/* Interactive Draggable CardStack Element */}
-          <div className="reveal" style={{ position: "relative" }}>
+          <div className="reveal reveal-bottom" style={{ position: "relative" }}>
             <CardStack
               images={featuredElevation}
               onCardClick={(src) => {
@@ -254,11 +254,11 @@ export default function Gallery({ showAll = false }: GalleryProps) {
           </div>
 
           {/* Drag hint */}
-          <p className="reveal text-center" style={{ marginTop: "16px", fontSize: "0.8rem", color: "var(--color-bronze-light, #b89a6a)", letterSpacing: "0.08em", opacity: 0.75 }}>
+          <p className="reveal reveal-fade text-center" style={{ marginTop: "16px", fontSize: "0.8rem", color: "var(--color-bronze-light, #b89a6a)", letterSpacing: "0.08em", opacity: 0.75 }}>
             ↕ Drag to browse · Click to enlarge
           </p>
 
-          <div className="reveal justify-center" style={{ marginTop: "48px" }}>
+          <div className="reveal reveal-bottom justify-center" style={{ marginTop: "48px" }}>
             <a href="/projects?tab=elevation" className="btn-outline-dark">
               View All Architecture Works
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{ marginLeft: "6px" }}>
@@ -271,14 +271,14 @@ export default function Gallery({ showAll = false }: GalleryProps) {
 
         {/* Section 2: Living Art — Premium Interiors */}
         <div className="container">
-          <div className="gallery-section-header reveal text-center" style={{ marginBottom: "48px" }}>
+          <div className="gallery-section-header reveal reveal-top text-center" style={{ marginBottom: "48px" }}>
             <span className="section-eyebrow">Living Art</span>
             <h2 className="section-title">Premium Interiors</h2>
             <div className="about-heading-line" style={{ margin: "16px auto 0 auto" }} />
           </div>
 
           {/* Interactive Draggable CardStack Element */}
-          <div className="reveal" style={{ position: "relative" }}>
+          <div className="reveal reveal-bottom" style={{ position: "relative" }}>
             <CardStack
               images={featuredInteriors}
               onCardClick={(src) => {
@@ -291,11 +291,11 @@ export default function Gallery({ showAll = false }: GalleryProps) {
           </div>
 
           {/* Drag hint */}
-          <p className="reveal text-center" style={{ marginTop: "16px", fontSize: "0.8rem", color: "var(--color-bronze-light, #b89a6a)", letterSpacing: "0.08em", opacity: 0.75 }}>
+          <p className="reveal reveal-fade text-center" style={{ marginTop: "16px", fontSize: "0.8rem", color: "var(--color-bronze-light, #b89a6a)", letterSpacing: "0.08em", opacity: 0.75 }}>
             ↕ Drag to browse · Click to enlarge
           </p>
 
-          <div className="reveal justify-center" style={{ marginTop: "48px" }}>
+          <div className="reveal reveal-bottom justify-center" style={{ marginTop: "48px" }}>
             <a href="/projects?tab=interiors" className="btn-outline-dark">
               View All Interior Works
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{ marginLeft: "6px" }}>
@@ -335,14 +335,14 @@ export default function Gallery({ showAll = false }: GalleryProps) {
       <div className="container">
         
         {/* Header */}
-        <div className="gallery-section-header reveal" style={{ textAlign: "center", marginBottom: "48px" }}>
+        <div className="gallery-section-header reveal reveal-top" style={{ textAlign: "center", marginBottom: "48px" }}>
           <span className="section-eyebrow">Portfolio</span>
           <h2 className="section-title">Explore Our Work</h2>
           <div className="about-heading-line" style={{ margin: "16px auto 0 auto" }} />
         </div>
 
         {/* Tab Controls Selector */}
-        <div className="gallery-tabs-container reveal">
+        <div className="gallery-tabs-container reveal reveal-fade">
           <button
             className={`gallery-tab-btn ${activeTab === "elevation" ? "active" : ""}`}
             onClick={() => setActiveTab("elevation")}
@@ -364,7 +364,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
           {displayedImages.map((src, idx) => (
             <div
               key={src}
-              className="project-card clean-gallery-card reveal"
+              className="project-card clean-gallery-card reveal reveal-bottom"
               style={{ cursor: "pointer" }}
               onClick={() => openLightbox(allSlides, idx)}
               role="button"
@@ -391,7 +391,7 @@ export default function Gallery({ showAll = false }: GalleryProps) {
 
         {/* Load More Button */}
         {visibleCount < activeImages.length && (
-          <div className="reveal" style={{ display: "flex", justifyContent: "center", marginTop: "48px" }}>
+          <div className="reveal reveal-bottom" style={{ display: "flex", justifyContent: "center", marginTop: "48px" }}>
             <button
               className="btn-outline-dark"
               onClick={() => setVisibleCount((prev) => prev + 12)}

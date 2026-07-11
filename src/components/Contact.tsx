@@ -92,14 +92,14 @@ export default function Contact() {
     <section className="contact-section texture-linen" id="contact" ref={sectionRef}>
       <div className="container">
         {/* Header */}
-        <div className="contact-section-header reveal">
+        <div className="contact-section-header reveal reveal-top">
           <span className="section-eyebrow">Get In Touch</span>
           <h2 className="section-title">Let&apos;s Build Something</h2>
         </div>
 
         <div className="contact-layout justify-center md:justify-between">
           {/* Left: Contact Methods */}
-          <div className="contact-methods reveal text-center md:text-left">
+          <div className="contact-methods reveal reveal-left text-center md:text-left">
             {contactMethods.map((method) => (
               <a
                 key={method.id}
@@ -131,7 +131,7 @@ export default function Contact() {
           </div>
 
           {/* Right: Address + Map */}
-          <div className="contact-map-col reveal text-center md:text-left" style={{ transitionDelay: "150ms" }}>
+          <div className="contact-map-col reveal reveal-right text-center md:text-left" style={{ transitionDelay: "150ms" }}>
             <div className="contact-address">
               <span className="contact-address-label">Studio Address</span>
               <p className="contact-address-text">

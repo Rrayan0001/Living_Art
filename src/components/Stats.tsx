@@ -42,7 +42,7 @@ function useCounter(target: number, duration = 2000, active: boolean) {
 function StatItem({ stat, active }: { stat: Stat; active: boolean }) {
   const count = useCounter(stat.target, 2000, active && !stat.isStatic);
   return (
-    <div className="reveal">
+    <div className="reveal reveal-bottom">
       <span className="stat-number tnum">
         {stat.isStatic ? stat.staticValue : count + stat.suffix}
       </span>

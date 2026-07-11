@@ -77,7 +77,7 @@ export default function About() {
         <div className="about-grid justify-center">
           
           {/* Left Column: About Me (Founder Profile) */}
-          <div className="about-col-left reveal">
+          <div className="about-col-left reveal reveal-left">
             <span className="section-eyebrow">The Visionary</span>
             <h2 className="section-title">About Me</h2>
             <div className="about-heading-line" />
@@ -116,7 +116,7 @@ export default function About() {
           </div>
 
           {/* Right Column: About Us & Companies */}
-          <div className="about-col-right reveal">
+          <div className="about-col-right reveal reveal-right">
             <span className="section-eyebrow">Our Legacy</span>
             <h2 className="section-title">About Us</h2>
             <div className="about-heading-line" />
