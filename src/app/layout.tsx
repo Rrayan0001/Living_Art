@@ -42,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${dmSerifDisplay.variable} ${barlowCondensed.variable} ${dmSans.variable}`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${dmSerifDisplay.variable} ${barlowCondensed.variable} ${dmSans.variable}`} suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -97,9 +97,9 @@ export default function Contact() {
           <h2 className="section-title">Let&apos;s Build Something</h2>
         </div>
 
-        <div className="contact-layout">
+        <div className="contact-layout justify-center md:justify-between">
           {/* Left: Contact Methods */}
-          <div className="contact-methods reveal">
+          <div className="contact-methods reveal text-center md:text-left">
             {contactMethods.map((method) => (
               <a
                 key={method.id}
@@ -131,7 +131,7 @@ export default function Contact() {
           </div>
 
           {/* Right: Address + Map */}
-          <div className="contact-map-col reveal" style={{ transitionDelay: "150ms" }}>
+          <div className="contact-map-col reveal text-center md:text-left" style={{ transitionDelay: "150ms" }}>
             <div className="contact-address">
               <span className="contact-address-label">Studio Address</span>
               <p className="contact-address-text">

@@ -78,7 +78,7 @@ export default function Stats() {
   return (
     <section className="stats-section" id="stats" ref={sectionRef}>
       <div className="container">
-        <div className="stats-grid reveal-stagger">
+        <div className="stats-grid reveal-stagger justify-center">
           {stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} active={active} />
           ))}

@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <Header />
 
       {/* Main Content with Spacer to avoid navbar overlap */}
-      <main className="pt-[70px] md:pt-[90px]" style={{ minHeight: "100vh" }}>
+      <main className="pt-[140px] md:pt-[160px]" style={{ minHeight: "100vh" }}>
         <Gallery showAll={true} />
       </main>
 
