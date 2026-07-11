@@ -15,7 +15,7 @@ const heroImages = [
 const baseElevationImages = Array.from({ length: 31 }, (_, i) => {
   const idx = String(i + 1).padStart(3, "0");
   return `/assets/living-aart-elevation-architecture/elevation-${idx}.jpg`;
-}).filter(src => !src.includes("elevation-004.jpg"));
+}).filter(src => !src.includes("elevation-004.jpg") && !src.includes("elevation-022.jpg"));
 
 const elevationImages = [...heroImages, ...baseElevationImages];
 
