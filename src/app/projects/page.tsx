@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <Header />
 
       {/* Main Content with Spacer to avoid navbar overlap */}
-      <main style={{ paddingTop: "180px", minHeight: "100vh" }}>
+      <main className="projects-main">
         <Gallery showAll={true} />
       </main>
 

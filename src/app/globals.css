@@ -1970,5 +1970,15 @@ a {
   color: var(--alabaster);
 }
 
+.projects-main {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  .projects-main {
+    padding-top: 100px;
+  }
+}
+
 
 
