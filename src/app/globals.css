@@ -1365,30 +1365,31 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 32px;
   animation: fadeInDown 0.8s ease forwards;
-  width: max-content;
   margin-left: auto;
   margin-right: auto;
 }
 
 .welcome-logo-img {
   height: 48px;
-  width: auto;
+  width: 220px;
   object-fit: contain;
+  object-position: left center;
 }
 @media (min-width: 640px) {
   .welcome-logo-img {
-    height: 60px;
+    height: 56px;
+    width: 260px;
   }
 }
 
 .welcome-logo-separator {
-  width: 32px;
+  width: 36px;
   height: 1px;
-  background: rgba(163, 128, 82, 0.25);
-  margin-left: 14px;
+  background: rgba(163, 128, 82, 0.4);
+  margin-left: 0;
 }
 
 .welcome-text-group {
